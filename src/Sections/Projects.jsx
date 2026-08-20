@@ -4,7 +4,7 @@ import {
     FiExternalLink,
     FiArrowUpRight,
 } from "react-icons/fi";
-import TurboToys from '../assets/images/E-commerce.png'
+import TurboToys from '../assets/images/E-Commerce.png'
 import Portfolio from '../assets/images/Portfolio.png'
 import GYM from '../assets/images/GYM.png'
 import BMA from '../assets/images/BMA.png'
