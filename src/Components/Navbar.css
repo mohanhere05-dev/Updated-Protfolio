@@ -97,6 +97,10 @@
   cursor: pointer;
 }
 
+.menu-btn svg{
+  transition: 2s ease-in-out;
+}
+
 /* =================================
    TABLET — 768px
 ================================= */
@@ -122,7 +126,7 @@
     background: rgba(139, 92, 246, 0.08);
     color: var(--text-primary);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
   }
 
   .menu-btn:hover {
@@ -130,6 +134,7 @@
     background: rgba(139, 92, 246, 0.15);
     box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
   }
+
 
   .nav-links {
     width: 30%;
@@ -181,6 +186,7 @@
   }
 
   .resume-btn {
+    margin-top: 12px;
     width: 100%;
     justify-content: center;
     padding: 11px 16px;
@@ -229,6 +235,7 @@
   }
 
   .resume-btn {
+    margin-top: 12px;
     padding: 10px 14px;
     font-size: 14px;
   }

@@ -8,8 +8,9 @@ import aboutImage from "../assets/images/AboutImg.png";
 const About = () => {
     const roles = [
         "MERN Stack Developer",
-        "Frontend Developer",
+        "Full Stack Developer",
         "React Developer",
+        "Frontend Developer",
     ];
 
     const [roleIndex, setRoleIndex] = useState(0);
@@ -103,7 +104,7 @@ const About = () => {
                                         </motion.strong>
                                     </AnimatePresence>
                                 </span>{" "}
-                                focused on building responsive, modern and
+                                &nbsp; &nbsp;&nbsp; focused on building responsive, modern and
                                 user-friendly web applications.
                             </p>
 

@@ -8,8 +8,9 @@ import './Hero.css';
 const Hero = () => {
     const roles = [
         "MERN Stack Developer",
-        "Frontend Developer",
+        "Full Stack Developer",
         "React Developer",
+        "Frontend Developer",
     ];
 
     const [roleIndex, setRoleIndex] = useState(0);
@@ -40,6 +41,8 @@ const Hero = () => {
 
         return () => clearTimeout(timer);
     }, [text, isDeleting, roleIndex]);
+
+    
     return (
         <>
             <section id="Home" className="hero">
@@ -51,7 +54,7 @@ const Hero = () => {
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         delay={{}}
-                        transition={{ duration: 0.8 }}
+                        transition={{ delay: 3, duration: 1 }}
                     >
                         <div className="hero-heading">
                             <span className="hero-line"></span>

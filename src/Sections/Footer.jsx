@@ -58,6 +58,8 @@ const Footer = () => {
 
                             <a
                                 href="https://www.instagram.com/mr_sketch_390/"
+                                target="_blank"
+                                rel="noreferrer"
                                 aria-label="Instagram"
                             >
                                 <FaInstagram />
