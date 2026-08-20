@@ -1,9 +1,26 @@
 import React, { lazy } from 'react'
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState } from "react";
 import { FiUser, FiMapPin, FiMail, FiBriefcase, FiDownload, } from "react-icons/fi";
 import './About.css'
 import aboutImage from "../assets/images/AboutImg.png";
+
 const About = () => {
+    const roles = [
+        "MERN Stack Developer",
+        "Frontend Developer",
+        "React Developer",
+    ];
+
+    const [roleIndex, setRoleIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setRoleIndex((prev) => (prev + 1) % roles.length);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, []);
     return (
         <>
             <section id="About" className="about-section">
@@ -60,7 +77,32 @@ const About = () => {
 
                             <p className="about-intro">
                                 I'm <span>Mohan</span>, a passionate{" "}
-                                <strong>MERN Stack Developer</strong>{" "}
+                                <span className="animated-role-wrapper">
+                                    <AnimatePresence mode="wait">
+                                        <motion.strong
+                                            key={roleIndex}
+                                            className="animated-role"
+                                            initial={{
+                                                y: 25,
+                                                opacity: 0,
+                                            }}
+                                            animate={{
+                                                y: 0,
+                                                opacity: 1,
+                                            }}
+                                            exit={{
+                                                y: -25,
+                                                opacity: 0,
+                                            }}
+                                            transition={{
+                                                duration: 0.45,
+                                                ease: "easeInOut",
+                                            }}
+                                        >
+                                            {roles[roleIndex]}
+                                        </motion.strong>
+                                    </AnimatePresence>
+                                </span>{" "}
                                 focused on building responsive, modern and
                                 user-friendly web applications.
                             </p>

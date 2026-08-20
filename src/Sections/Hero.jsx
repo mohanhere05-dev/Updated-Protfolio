@@ -1,10 +1,45 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { FiGithub, FiLinkedin, FiMail, FiArrowRight, } from "react-icons/fi";
 import { FaCode, FaReact } from "react-icons/fa";
 import './Hero.css';
 
 
 const Hero = () => {
+    const roles = [
+        "MERN Stack Developer",
+        "Frontend Developer",
+        "React Developer",
+    ];
+
+    const [roleIndex, setRoleIndex] = useState(0);
+    const [text, setText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+
+    useEffect(() => {
+        const currentRole = roles[roleIndex];
+
+        const typingSpeed = isDeleting ? 50 : 100;
+
+        const timer = setTimeout(() => {
+            if (!isDeleting) {
+                setText(currentRole.substring(0, text.length + 1));
+
+                if (text.length === currentRole.length) {
+                    setTimeout(() => setIsDeleting(true), 1200);
+                }
+            } else {
+                setText(currentRole.substring(0, text.length - 1));
+
+                if (text.length === 0) {
+                    setIsDeleting(false);
+                    setRoleIndex((prev) => (prev + 1) % roles.length);
+                }
+            }
+        }, typingSpeed);
+
+        return () => clearTimeout(timer);
+    }, [text, isDeleting, roleIndex]);
     return (
         <>
             <section id="Home" className="hero">
@@ -22,7 +57,10 @@ const Hero = () => {
                             <span className="hero-line"></span>
                             <div className="hero-text">
                                 <h1> Hi, I'm<span className="hero-name"> Mohan</span></h1>
-                                <h2>MERN Stack Developer</h2>
+                                <h2 className="typing-role">
+                                    {text}
+                                    <span className="typing-cursor">|</span>
+                                </h2>
                             </div>
                         </div>
 
