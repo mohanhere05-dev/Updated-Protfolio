@@ -103,8 +103,8 @@ const About = () => {
                                             {roles[roleIndex]}
                                         </motion.strong>
                                     </AnimatePresence>
-                                </span>{" "}
-                                &nbsp; &nbsp;&nbsp; focused on building responsive, modern and
+                                </span>{" "}&nbsp;
+                                focused on building responsive, modern and
                                 user-friendly web applications.
                             </p>
 
