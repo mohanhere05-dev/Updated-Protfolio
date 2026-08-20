@@ -49,7 +49,7 @@
     margin-top: 8px;
     border-radius: 10px;
     background: linear-gradient(to bottom,
-            var(--PURPLE),
+            var(--purple),
             rgba(139, 92, 246, 0.08));
     box-shadow:
         0 0 10px rgba(139, 92, 246, 0.8),
