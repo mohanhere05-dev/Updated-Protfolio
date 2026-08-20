@@ -1,0 +1,68 @@
+.intro-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center,
+            rgba(139, 92, 246, 0.12),
+            transparent 45%),
+        #030510;
+}
+
+
+/* NAME */
+.intro-name {
+    margin: 0;
+    position: relative;
+    z-index: 3;
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background:
+        linear-gradient(90deg,
+            #7c3aed,
+            #a855f7,
+            #c084fc);
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter:drop-shadow(0 0 30px rgba(139, 92, 246, 0.5));
+}
+
+
+/* PURPLE LINE */
+
+.intro-line {
+    width: 180px;
+    height: 2px;
+    margin-top: 12px;
+    background:
+        linear-gradient(90deg,
+            transparent,
+            #a855f7,
+            transparent);
+    box-shadow:0 0 15px rgba(168, 85, 247, 0.8);
+}
+
+
+/* ZOOM EFFECT */
+
+.intro-zoom {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle,
+            rgba(139, 92, 246, 0.18),
+            transparent 70%);
+    filter: blur(20px);
+    pointer-events: none;
+}

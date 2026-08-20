@@ -1,0 +1,641 @@
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.projects-section {
+    position: relative;
+
+    padding: 120px 6% 130px;
+
+    overflow: hidden;
+
+    background: #050714;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+.projects-section::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -300px;
+    top: 20%;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(circle,
+            rgba(139, 92, 246, 0.13),
+            transparent 70%);
+
+    filter: blur(70px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.projects-container {
+    position: relative;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.projects-heading {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+
+.projects-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 12px;
+
+    color: #a855f7;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+}
+
+
+.projects-label span {
+    width: 18px;
+    height: 2px;
+    background: #8b5cf6;
+    box-shadow:0 0 10px rgba(139, 92, 246, 0.8);
+}
+
+
+.projects-heading h2 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: clamp(2rem,
+            4vw,
+            3rem);
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.projects-heading h2 span {
+    color: #a855f7;
+}
+
+
+.projects-heading p {
+    max-width: 620px;
+
+    margin: 15px auto 0;
+
+    color: #94a3b8;
+
+    line-height: 1.7;
+
+    font-size: 1rem;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(15, 18, 38, 0.9),
+            rgba(7, 10, 25, 0.78));
+
+    border:
+        1px solid rgba(139, 92, 246, 0.15);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(139, 92, 246, 0.5);
+
+    box-shadow:
+        0 25px 55px rgba(139, 92, 246, 0.14);
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.project-image-wrapper {
+    position: relative;
+
+    width: 100%;
+
+    height: 250px;
+
+    overflow: hidden;
+
+    background: #080b1c;
+}
+
+
+.project-image {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease;
+}
+
+
+.project-card:hover .project-image {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.project-image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background:
+        rgba(5, 7, 20, 0.65);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+}
+
+
+.project-card:hover .project-image-overlay {
+    opacity: 1;
+}
+
+
+.project-image-overlay a {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #7c3aed,
+            #a855f7);
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.45);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.project-image-overlay a:hover {
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.project-content {
+    padding: 26px;
+}
+
+
+/* CATEGORY */
+
+.project-category {
+    color: #a855f7;
+
+    font-size: 0.72rem;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TITLE
+========================================= */
+
+.project-title-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 8px;
+}
+
+
+.project-title-row h3 {
+    margin: 0;
+
+    color: var(--text-primary);
+
+    font-size: 1.45rem;
+
+    font-weight: 650;
+}
+
+
+.project-arrow {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #c084fc;
+
+    background:
+        rgba(139, 92, 246, 0.08);
+
+    border:
+        1px solid rgba(139, 92, 246, 0.16);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.project-arrow:hover {
+    transform: translate(3px, -3px);
+
+    background:
+        rgba(139, 92, 246, 0.18);
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.project-description {
+    margin: 15px 0 20px;
+
+    color: #94a3b8;
+
+    font-size: 0.9rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TECHNOLOGIES
+========================================= */
+
+.project-technologies {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+
+.project-technologies span {
+    padding: 6px 10px;
+
+    border-radius: 6px;
+
+    color: #c4b5fd;
+
+    background:
+        rgba(139, 92, 246, 0.07);
+
+    border:
+        1px solid rgba(139, 92, 246, 0.14);
+
+    font-size: 0.7rem;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.project-technologies span:hover {
+    background:
+        rgba(139, 92, 246, 0.14);
+
+    border-color:
+        rgba(139, 92, 246, 0.3);
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.project-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.project-live-btn,
+.project-github-btn {
+    min-height: 42px;
+
+    padding: 0 16px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-size: 0.8rem;
+
+    font-weight: 500;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* LIVE */
+
+.project-live-btn {
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #7c3aed,
+            #a855f7);
+
+    box-shadow:
+        0 6px 20px rgba(139, 92, 246, 0.2);
+}
+
+
+.project-live-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(139, 92, 246, 0.35);
+}
+
+
+/* GITHUB */
+
+.project-github-btn {
+    color: #cbd5e1;
+
+    background:
+        rgba(139, 92, 246, 0.04);
+
+    border:
+        1px solid rgba(139, 92, 246, 0.25);
+}
+
+
+.project-github-btn:hover {
+    transform: translateY(-3px);
+
+    color: #fff;
+
+    border-color:
+        #8b5cf6;
+
+    background:
+        rgba(139, 92, 246, 0.1);
+}
+
+
+/* =========================================
+   MORE PROJECTS
+========================================= */
+
+.projects-more {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 55px;
+}
+
+
+.all-projects-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    color: #c084fc;
+
+    border:
+        1px solid rgba(139, 92, 246, 0.5);
+
+    background:
+        rgba(139, 92, 246, 0.04);
+
+    text-decoration: none;
+
+    font-size: 0.85rem;
+
+    transition: all 0.3s ease;
+}
+
+
+.all-projects-btn:hover {
+    color: #fff;
+
+    background:
+        rgba(139, 92, 246, 0.14);
+
+    border-color:
+        #a855f7;
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 30px rgba(139, 92, 246, 0.18);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .projects-section {
+        padding: 90px 5% 100px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .projects-section {
+        padding: 75px 20px 90px;
+    }
+
+    .projects-heading {
+        margin-bottom: 40px;
+    }
+
+    .projects-heading h2 {
+        font-size: 2rem;
+    }
+
+    .projects-heading p {
+        font-size: 0.9rem;
+    }
+
+    .projects-grid {
+        gap: 18px;
+    }
+
+    .project-image-wrapper {
+        height: 210px;
+    }
+
+    .project-content {
+        padding: 20px;
+    }
+
+    .project-title-row h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-description {
+        font-size: 0.85rem;
+    }
+
+    .project-actions {
+        flex-wrap: wrap;
+    }
+
+    .project-live-btn,
+    .project-github-btn {
+        flex: 1;
+    }
+
+}

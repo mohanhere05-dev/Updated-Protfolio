@@ -1,0 +1,235 @@
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(5, 7, 20, 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.08);
+}
+
+.navbar-container {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+/*LOGO*/
+.logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: var(--purple);
+}
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-links a {
+    position: relative;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--purple);
+}
+
+.nav-links a:not(.resume-btn)::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    transform: translateX(-50%);
+    background: var(--purple);
+    box-shadow: 0 0 10px var(--purple);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:not(.resume-btn):hover::after {
+    width: 100%;
+}
+
+/* RESUME BUTTON */
+.resume-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 17px;
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 8px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+    background: rgba(139, 92, 246, 0.22);
+    border-color: var(--purple);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+    transform: translateY(-2px);
+}
+
+.menu-btn {
+  display: none;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* =================================
+   TABLET — 768px
+================================= */
+
+@media (max-width: 768px) {
+
+  .navbar-container {
+    height: 72px;
+  }
+
+  .logo {
+    font-size: 24px;
+  }
+
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    border-radius: 8px;
+    background: rgba(139, 92, 246, 0.08);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .menu-btn:hover {
+    border-color: var(--purple);
+    background: rgba(139, 92, 246, 0.15);
+    box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  }
+
+  .nav-links {
+    width: 30%;
+    position: absolute;
+    top: 82px;
+    left: 480px;
+    right: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+    background: rgba(8, 11, 26, 0.96);
+    border: 1px solid rgba(139, 92, 246, 0.18);
+    border-radius: 14px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s ease;
+  }
+
+  .nav-links.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+
+  .nav-links a:not(.resume-btn)::after {
+    left: 0;
+    bottom: 0;
+    transform: none;
+  }
+
+  .nav-links a:not(.resume-btn):hover::after {
+    width: 100%;
+  }
+
+  .resume-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 16px;
+  }
+}
+
+
+/* =================================
+   MOBILE — 480px
+================================= */
+
+@media (max-width: 480px) {
+
+  .container {
+    width: min(100% - 28px, var(--container));
+  }
+
+  .navbar-container {
+    height: 68px;
+  }
+
+  .logo {
+    padding-left: 30px;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+  }
+
+  .menu-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.45rem;
+  }
+
+  .nav-links {
+    width: 210px;
+    top: 76px;
+    left: 234px;
+    right: 14px;
+    padding: 20px;
+    gap: 2px;
+    border-radius: 12px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+  }
+
+  .resume-btn {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}

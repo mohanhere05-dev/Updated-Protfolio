@@ -1,0 +1,269 @@
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    position: relative;
+    padding: 48px 6% 30px;
+    background:
+        radial-gradient(circle at 50% 0%,
+            rgba(139, 92, 246, 0.08),
+            transparent 35%),
+        #030510;
+
+    border-top:
+        1px solid rgba(139, 92, 246, 0.12);
+
+    overflow: hidden;
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* =========================================
+   FOOTER TOP
+========================================= */
+
+.footer-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* BRAND */
+
+.footer-brand h2 {
+    margin: 0;
+    color: var(--text-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.footer-brand h2 span {
+    color: #a855f7;
+    text-shadow: 0 0 15px rgba(168, 85, 247, 0.7);
+}
+
+.footer-brand p {
+    margin: 8px 0 0;
+
+    color: #64748b;
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #94a3b8;
+    background:
+        rgba(139, 92, 246, 0.05);
+
+    border:
+        1px solid rgba(139, 92, 246, 0.2);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.footer-socials a:hover {
+    transform: translateY(-5px);
+
+    color: #c084fc;
+
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 22px rgba(139, 92, 246, 0.3);
+}
+
+
+/* =========================================
+   LINE
+========================================= */
+
+.footer-line {
+    width: 100%;
+    height: 1px;
+
+    margin: 35px 0 25px;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(139, 92, 246, 0.3),
+            transparent);
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.footer-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #475569;
+
+    font-size: 0.75rem;
+}
+
+.footer-bottom span {
+    color: #a855f7;
+
+    text-shadow:
+        0 0 10px rgba(168, 85, 247, 0.6);
+}
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+.back-to-top {
+    position: absolute;
+
+    top: 57px;
+    right: 6%;
+
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(168, 85, 247, 0.6);
+
+    border-radius: 50%;
+
+    color: #fff;
+
+    background:
+        linear-gradient(135deg,
+            #7c3aed,
+            #a855f7);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 25px rgba(139, 92, 246, 0.35);
+
+    animation:
+        footerFloat 2s ease-in-out infinite;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.back-to-top:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 35px rgba(139, 92, 246, 0.65);
+}
+
+
+/* ARROW */
+
+.back-to-top svg {
+    animation:
+        arrowUp 1.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes footerFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes arrowUp {
+
+    0%,
+    100% {
+        transform: translateY(2px);
+    }
+
+    50% {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .footer {
+        padding: 60px 5% 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
+
+    .back-to-top {
+        right: 5%;
+
+        width: 48px;
+        height: 48px;
+    }
+}
