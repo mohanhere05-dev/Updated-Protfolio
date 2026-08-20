@@ -6,7 +6,7 @@
     position: relative;
     padding: 110px 6% 130px;
     overflow: hidden;
-    background: #050714;
+    background: var(--bg-primary);
 }
 
 .skills-section::before {
@@ -52,7 +52,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #a855f7;
+    color: var(--purple-bright);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 12px;
@@ -62,7 +62,7 @@
 .skills-label span {
     width: 18px;
     height: 2px;
-    background: #8b5cf6;
+    background: var(--purple);
     box-shadow:
         0 0 10px rgba(139, 92, 246, 0.8);
 }
@@ -78,14 +78,14 @@
 
 
 .skills-heading h2 span {
-    color: #a855f7;
+    color: var(--purple-bright);
 }
 
 
 .skills-heading p {
     max-width: 600px;
     margin: 15px auto 0;
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.7;
 }
@@ -177,7 +177,7 @@
     align-items: center;
     justify-content: center;
     border-radius: 12px;
-    color: #a855f7;
+    color: var(--purple-bright);
     background: rgba(139, 92, 246, 0.09);
     border: 1px solid rgba(139, 92, 246, 0.2);
     font-size: 1.5rem;
@@ -218,7 +218,7 @@
 
 
 .skill-info span {
-    color: #a855f7;
+    color: var(--purple-bright);
     font-size: 0.85rem;
     font-weight: 600;
 }
@@ -242,8 +242,8 @@
     height: 100%;
     border-radius: inherit;
     background: linear-gradient(90deg,
-            #7c3aed,
-            #a855f7,
+            var(--purple-dark),
+            var(--purple-bright),
             #c084fc);
     box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
     position: relative;
@@ -299,7 +299,7 @@
 
 
     .skill-info span {
-        color: #a855f7;
+        color: var(--purple-bright);
         font-size: 12px;
         font-weight: 600;
     }
@@ -312,7 +312,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 6px;
-        color: #a855f7;
+        color: var(--purple-bright);
         background: rgba(139, 92, 246, 0.09);
         border: 1px solid rgba(139, 92, 246, 0.2);
         font-size: 16px;
@@ -392,7 +392,7 @@
 
 
     .skill-info span {
-        color: #a855f7;
+        color: var(--purple-bright);
         font-size: 8px;
         font-weight: 600;
     }
@@ -412,8 +412,8 @@
         height: 100%;
         border-radius: inherit;
         background: linear-gradient(90deg,
-                #7c3aed,
-                #a855f7,
+                var(--purple-dark),
+                var(--purple-bright),
                 #c084fc);
         box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
         position: relative;

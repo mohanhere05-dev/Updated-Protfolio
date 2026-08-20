@@ -26,8 +26,8 @@
     color: #ffffff;
     background:
         linear-gradient(90deg,
-            #7c3aed,
-            #a855f7,
+            var(--purple-dark),
+            var(--purple-bright),
             #c084fc);
 
     -webkit-background-clip: text;
@@ -46,7 +46,7 @@
     background:
         linear-gradient(90deg,
             transparent,
-            #a855f7,
+            var(--purple-bright),
             transparent);
     box-shadow:0 0 15px rgba(168, 85, 247, 0.8);
 }
@@ -61,7 +61,7 @@
     border-radius: 50%;
     background:
         radial-gradient(circle,
-            rgba(139, 92, 246, 0.18),
+            var(--border),
             transparent 70%);
     filter: blur(20px);
     pointer-events: none;

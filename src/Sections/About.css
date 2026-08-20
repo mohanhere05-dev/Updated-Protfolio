@@ -2,7 +2,7 @@
     position: relative;
     padding: 110px 6% 130px;
     overflow: hidden;
-    background: #050714;
+    background: var(--bg-primary);
 }
 
 
@@ -43,7 +43,7 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    color: #a855f7;
+    color: var(--purple-bright);
     font-size: 1rem;
     font-weight: 600;
     margin-bottom: 12px;
@@ -157,7 +157,7 @@
 
 .about-intro span,
 .about-intro strong {
-    color: #a855f7;
+    color: var(--purple-bright);
 }
 
 .animated-role-wrapper {
@@ -169,12 +169,12 @@
 
 .animated-role {
     display: inline-block;
-    color: #a855f7;
+    color: var(--purple-bright);
 }
 
 .about-text {
     margin: 0 0 32px;
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 1rem;
     line-height: 1.8;
 }
@@ -214,7 +214,7 @@
     flex-shrink: 0;
     width: 20px;
     height: 20px;
-    color: #a855f7;
+    color:var(--purple-bright);
 }
 
 
@@ -260,7 +260,7 @@
 .resume-btn:hover {
     color: #fff;
     background: rgba(139, 92, 246, 0.15);
-    border-color: #a855f7;
+    border-color: var(--purple-bright);
     box-shadow: 0 8px 25px rgba(139, 92, 246, 0.2);
     transform: translateY(-3px);
 }

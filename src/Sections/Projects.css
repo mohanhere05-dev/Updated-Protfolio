@@ -9,7 +9,7 @@
 
     overflow: hidden;
 
-    background: #050714;
+    background: var(--bg-primary);
 }
 
 
@@ -76,7 +76,7 @@
 
     margin-bottom: 12px;
 
-    color: #a855f7;
+    color: var(--purple-bright);
 
     font-size: 1rem;
 
@@ -87,8 +87,8 @@
 .projects-label span {
     width: 18px;
     height: 2px;
-    background: #8b5cf6;
-    box-shadow:0 0 10px rgba(139, 92, 246, 0.8);
+    background: var(--purple);
+    box-shadow: 0 0 10px rgba(139, 92, 246, 0.8);
 }
 
 
@@ -108,7 +108,7 @@
 
 
 .projects-heading h2 span {
-    color: #a855f7;
+    color: var(--purple-bright);
 }
 
 
@@ -117,7 +117,7 @@
 
     margin: 15px auto 0;
 
-    color: #94a3b8;
+    color: var(--text-muted);
 
     line-height: 1.7;
 
@@ -257,8 +257,8 @@
 
     background:
         linear-gradient(135deg,
-            #7c3aed,
-            #a855f7);
+            var(--purple-dark),
+            var(--purple-bright));
 
     box-shadow:
         0 0 25px rgba(139, 92, 246, 0.45);
@@ -287,7 +287,7 @@
 /* CATEGORY */
 
 .project-category {
-    color: #a855f7;
+    color: var(--purple-bright);
 
     font-size: 0.72rem;
 
@@ -357,9 +357,7 @@
 
 .project-arrow:hover {
     transform: translate(3px, -3px);
-
-    background:
-        rgba(139, 92, 246, 0.18);
+    background: var(--border);
 }
 
 
@@ -370,7 +368,7 @@
 .project-description {
     margin: 15px 0 20px;
 
-    color: #94a3b8;
+    color: var(--text-muted);
 
     font-size: 0.9rem;
 
@@ -471,8 +469,8 @@
 
     background:
         linear-gradient(135deg,
-            #7c3aed,
-            #a855f7);
+            var(--purple-dark),
+            var(--purple-bright));
 
     box-shadow:
         0 6px 20px rgba(139, 92, 246, 0.2);
@@ -490,7 +488,7 @@
 /* GITHUB */
 
 .project-github-btn {
-    color: #cbd5e1;
+    color: var(--text-secondary);
 
     background:
         rgba(139, 92, 246, 0.04);
@@ -505,8 +503,7 @@
 
     color: #fff;
 
-    border-color:
-        #8b5cf6;
+    border-color: var(--purple);
 
     background:
         rgba(139, 92, 246, 0.1);
@@ -561,12 +558,12 @@
         rgba(139, 92, 246, 0.14);
 
     border-color:
-        #a855f7;
+        var(--purple-bright);
 
     transform: translateY(-3px);
 
     box-shadow:
-        0 10px 30px rgba(139, 92, 246, 0.18);
+        0 10px 30px var(--border);
 }
 
 
