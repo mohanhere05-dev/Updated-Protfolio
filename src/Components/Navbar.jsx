@@ -46,7 +46,7 @@ const Navbar = () => {
                             >{link.name}</a>
 
                         ))}
-                        <a href="/resume/Mohan_MERN-Stack_Resume.pdf" download className='resume-btn'><FiDownload /> Resume</a>
+                        <a href="/resume/MohanUpdated_Resumee.pdf" download className='resume-btn'><FiDownload /> Resume</a>
                     </nav>
 
                     <button
