@@ -149,7 +149,7 @@ const About = () => {
                             </div>
 
                             {/* RESUME */}
-                            <a href="/resume/Mohan_MERN-Stack_Resume.pdf"
+                            <a href="/resume/MohanUpdated_Resumee.pdf"
                                 download
                                 className="resume-btn"
                             >
